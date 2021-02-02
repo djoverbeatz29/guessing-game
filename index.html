@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>My Guessing Game Page</title>
+        <link rel="stylesheet" href="styles/style.css">
+        <script src="scripts/playGuessingGame.js" async></script>
+      </body>
+    </head>
+    <body onload="init()">
+        <h1>Welcome to the Guessing Game!</h1>
+        <h2 id="game-prompt"></h2>
+        <div id="max-holder" style="display:block">
+            <h3 id="max-error-holder"></h3>
+            <form id="max-form">
+                <label for="max">Max</label>
+                <input type="text" id="max"><br><br>
+                <input type="submit" value="Submit">
+            </form>
+        </div>
+        <div id="guess-holder" style="display:none">
+            <div id="hint-box"></div><br>
+            <button id="hint-button">Show Hint</button><br>
+            <h3 id="guess-error-holder"></h3>
+            <div id="guess-display">
+                <h4 id="guess-count"></h4>
+                <h4>High Guesses</h4>
+                <div class="guess-holder" id="too-high"></div>
+                <h4>Low Guesses</h4>
+                <div class="guess-holder" id="too-low"></div>
+            </div><br>
+            <form id="guess-form">
+                <label for="guess">Guess</label>
+                <input type="text" id="guess"><br><br>
+                <input type="submit" value="Submit">
+            </form>
+        </div>
+        <div id="victory-message">
+            <div id="results-messages"></div>
+            <div class="guess-holder" id="final-guess-holder"></div>
+        </div><br>
+        <button id="play-again" type="submit" value="play-again" onclick="init()">Play Again</button>
+    </body>
+</html>
